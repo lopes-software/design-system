@@ -7,10 +7,14 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@lopes-software"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "npm run build:lib",
-    "build:lib": "vue-cli-service build --target lib --name design-system src/index.js"
+    "build:lib": "vue-cli-service build --target lib --name design-system src/index.js",
+    "release": "git push --follow-tags && npm publish"
   },
   "dependencies": {
     "core-js": "^3.8.3",
