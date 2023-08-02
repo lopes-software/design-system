@@ -1,0 +1,52 @@
+{
+  "name": "@lopes-software/design-system",
+  "version": "0.0.1",
+  "main": "dist/design-system.common.js",
+  "module": "dist/design-system.umd.min.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@lopes-software"
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "npm run build:lib",
+    "build:lib": "vue-cli-service build --target lib --name design-system src/index.js",
+    "release": "git push --follow-tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lopes-software/design-system.git"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^2.6.14"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-template-compiler": "^2.6.14",
+    "sass": "^1.49.9",
+    "sass-loader": "^10.2.1"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {}
+  }
+}
