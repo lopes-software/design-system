@@ -1,9 +1,8 @@
 {
-  "name": "design-system",
+  "name": "@lopes-software/design-system",
   "version": "0.0.1",
   "main": "dist/design-system.common.js",
   "module": "dist/design-system.umd.min.js",
-  "private": true,
   "files": [
     "dist"
   ],
@@ -15,6 +14,10 @@
     "build": "npm run build:lib",
     "build:lib": "vue-cli-service build --target lib --name design-system src/index.js",
     "release": "git push --follow-tags && npm publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lopes-software/design-system.git"
   },
   "dependencies": {
     "core-js": "^3.8.3",
