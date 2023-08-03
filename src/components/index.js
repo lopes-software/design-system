@@ -5,6 +5,7 @@ import DateField from '@/components/DateField/DateField.vue'
 import FormSession from '@/components/FormSession/FormSession.vue'
 import FormTag from '@/components/FormTag/FormTag.vue'
 import InputField from '@/components/InputField/InputField.vue'
+import SelectField from '@/components/SelectField/SelectField.vue'
 
 export default {
   FormButton,
@@ -14,4 +15,5 @@ export default {
   FormSession,
   FormTag,
   InputField,
+  SelectField,
 }
