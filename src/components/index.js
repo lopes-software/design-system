@@ -6,6 +6,7 @@ import FormSession from '@/components/FormSession/FormSession.vue'
 import FormTag from '@/components/FormTag/FormTag.vue'
 import InputField from '@/components/InputField/InputField.vue'
 import SelectField from '@/components/SelectField/SelectField.vue'
+import TagSelector from '@/components/TagSelector/TagSelector.vue'
 
 export default {
   FormButton,
@@ -16,4 +17,5 @@ export default {
   FormTag,
   InputField,
   SelectField,
+  TagSelector,
 }
