@@ -7,6 +7,7 @@ import FormTag from '@/components/FormTag/FormTag.vue'
 import InputField from '@/components/InputField/InputField.vue'
 import SelectField from '@/components/SelectField/SelectField.vue'
 import TagSelector from '@/components/TagSelector/TagSelector.vue'
+import TextAreaField from '@/components/TextAreaField/TextAreaField.vue'
 
 export default {
   FormButton,
@@ -18,4 +19,5 @@ export default {
   InputField,
   SelectField,
   TagSelector,
+  TextAreaField,
 }
