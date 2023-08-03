@@ -3,9 +3,8 @@ version: "3"
 services:
   design-system:
     build: .
-    command: npm run serve
+    command: npm run storybook:serve
     ports:
-      - "8080:8080"
       - "6006:6006"
     volumes:
       - .:/app

@@ -14,6 +14,8 @@
     "build": "npm run build:lib",
     "build:lib": "vue-cli-service build --target lib --name design-system src/index.js",
     "test": "vue-cli-service test:unit",
+    "storybook:build": "vue-cli-service storybook:build -c config/storybook",
+    "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
     "release": "git push --follow-tags && npm publish"
   },
   "repository": {
@@ -40,7 +42,13 @@
     "babel-jest": "^27.0.6",
     "flush-promises": "^1.0.2",
     "jest": "^27.0.5",
-    "@vue/cli-plugin-unit-jest": "~5.0.0"
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
+    "@storybook/addon-essentials": "^6.4.3",
+    "@storybook/addon-links": "^6.4.3",
+    "@storybook/builder-webpack5": "^6.4.3",
+    "@storybook/manager-webpack5": "^6.4.3",
+    "@storybook/vue": "^6.4.3",
+    "vue-cli-plugin-storybook": "^3.0.0-rc.0"
   },
   "eslintConfig": {
     "root": true,
