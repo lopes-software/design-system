@@ -9,6 +9,7 @@ import SelectField from '@/components/SelectField/SelectField.vue'
 import TagSelector from '@/components/TagSelector/TagSelector.vue'
 import TextAreaField from '@/components/TextAreaField/TextAreaField.vue'
 import ModalDialog from '@/components/ModalDialog/ModalDialog.vue'
+import ListPagination from '@/components/ModalDialog/ModalDialog.vue'
 
 export default {
   FormButton,
@@ -22,4 +23,5 @@ export default {
   TagSelector,
   TextAreaField,
   ModalDialog,
+  ListPagination,
 }
