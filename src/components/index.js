@@ -8,6 +8,7 @@ import InputField from '@/components/InputField/InputField.vue'
 import SelectField from '@/components/SelectField/SelectField.vue'
 import TagSelector from '@/components/TagSelector/TagSelector.vue'
 import TextAreaField from '@/components/TextAreaField/TextAreaField.vue'
+import ModalDialog from '@/components/ModalDialog/ModalDialog.vue'
 
 export default {
   FormButton,
@@ -20,4 +21,5 @@ export default {
   SelectField,
   TagSelector,
   TextAreaField,
+  ModalDialog,
 }
