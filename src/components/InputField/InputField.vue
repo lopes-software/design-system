@@ -6,7 +6,7 @@
       class="form-control"
       @input="(event) => this.$emit('input', event.target.value)"
       @keyup.enter="(event) => $emit('enter')"
-      @change="(event) => this.$emit('change', event.target.value)"
+      @change="(event) => this.$emit('change', event)"
       :value="value"
       :class="[hasError(errorMessage), variant]"
       :disabled="disabled"
