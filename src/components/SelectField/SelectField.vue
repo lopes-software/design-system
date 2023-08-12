@@ -45,7 +45,7 @@ export default {
     },
 
     value: {
-      type: String,
+      type: [String, Boolean],
       default: ''
     },
 
