@@ -1,6 +1,6 @@
 {
   "name": "@lopes-software/design-system",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "dist/design-system.common.js",
   "module": "dist/design-system.umd.min.js",
   "files": [

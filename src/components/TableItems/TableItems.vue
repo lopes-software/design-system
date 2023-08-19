@@ -50,6 +50,18 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/constants.scss';
 
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+table tbody {
+  display: table;
+  width: 100%;
+}
+
+
 .table-items {
   background-color: #fff;
   width: 95%;
