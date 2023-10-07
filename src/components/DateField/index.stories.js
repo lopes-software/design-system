@@ -20,6 +20,16 @@ export const withValue = () => ({
   template: '<date-field label="Data" value="10/10/2010" />'
 })
 
+export const dateTimeFormat = () => ({
+  components: { DateField },
+  template: '<date-field label="Data" type="datetime" />'
+})
+
+export const dateTimeWithValue = () => ({
+  components: { DateField },
+  template: '<date-field label="Data" type="datetime" value="31/10/2010 18:03" />'
+})
+
 export const disable = () => ({
   components: { DateField },
   template: '<date-field label="Data" value="10/10/2010" :disabled="true" />'

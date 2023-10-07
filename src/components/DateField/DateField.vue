@@ -3,9 +3,9 @@
     <label data-test="date-field-label">{{ label }}</label>
       <date-picker
         @input="handleInput"
-        format="DD/MM/YYYY"
         value-type="format"
-        type="date"
+        :format="format"
+        :type="type"
         :value="value"
         :data-test="dataTest"
       />
@@ -54,9 +54,24 @@ export default {
       default: false
     },
 
+    type: {
+      type: String,
+      default: 'date',
+    },
+
     dataTest: {
       type: String,
       default: 'date-field-input'
+    }
+  },
+
+  computed: {
+    format () {
+      if (this.type === 'date') {
+        return 'DD/MM/YYYY'
+      }
+
+      return 'DD/MM/YYYY HH:mm'
     }
   },
 
