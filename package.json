@@ -16,7 +16,8 @@
     "test": "vue-cli-service test:unit",
     "storybook:build": "vue-cli-service storybook:build -c config/storybook",
     "storybook:serve": "vue-cli-service storybook:serve -p 6006 -c config/storybook",
-    "release": "git push --follow-tags && npm publish"
+    "release": "git push --follow-tags && npm publish",
+    "lint": "vue-cli-service lint"
   },
   "repository": {
     "type": "git",
@@ -64,6 +65,16 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {},
+    "overrides": [
+      {
+        "files": [
+          "**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
   }
 }
