@@ -11,6 +11,7 @@ import TextAreaField from '@/components/TextAreaField/TextAreaField.vue'
 import ModalDialog from '@/components/ModalDialog/ModalDialog.vue'
 import ListPagination from '@/components/ListPagination/ListPagination.vue'
 import TableItems from '@/components/TableItems/TableItems.vue'
+import MultiCheckboxField from '@/components/MultiCheckboxField/MultiCheckboxField.vue'
 
 export default {
   FormButton,
@@ -26,4 +27,5 @@ export default {
   ModalDialog,
   ListPagination,
   TableItems,
+  MultiCheckboxField,
 }
