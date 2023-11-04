@@ -45,9 +45,9 @@ Before create a new release, bump the package version on `package.json` file. Fo
 
 ```diff
 {
-	"name": "@lopes-software/design-system",
--  "version": "0.0.16",
-+  "version": "0.0.17",
+  "name": "@lopes-software/design-system",
+- "version": "0.0.16",
++ "version": "0.0.17",
   "main": "dist/design-system.common.js",
   "module": "dist/design-system.umd.min.js",
 }
