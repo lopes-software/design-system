@@ -21,7 +21,7 @@ npm run storybook:serve
 
 For the authentication and install, follow these steps:
 
-1. Generate a personal access token with access to read `design-system` repository. More info on this (article)[https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens].
+1. Generate a personal access token with access to read `design-system` repository. More info on this [article](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
 2. Run the following command on your terminal. This command will ask for some info, for username enter `lopes-software`, for password enter you github access token and for email your personal email.
 
