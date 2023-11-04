@@ -19,7 +19,14 @@ jobs:
         run: npm run lint && npm run test
       - name: Build package
         run: npm run build
-      - name: Publish package on NPM
-        run: npm login --scope=@lopes-software && npm publish
+      - name: Authenticate with NPM
+        run: |
+          npm set //npm.pkg.github.com/:_authToken=${NPM_TOKEN}
+          npm set //npm.pkg.github.com/:username="lopes-software"
+          npm set //npm.pkg.github.com/:email="flopes.alexandre@gmail.com"
+          npm set //npm.pkg.github.com/:_password=${NPM_TOKEN}
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish package on NPM
+        run: npm login && npm publish
+        
