@@ -28,5 +28,5 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish package on NPM
-        run: npm login && npm publish
+        run: npm login --auth-type legacy && npm publish
         
