@@ -23,7 +23,7 @@ export default {
     },
     dataTest: {
       type: String,
-      default: 'answered-field-value'
+      default: 'answered-field'
     }
   }
 }
