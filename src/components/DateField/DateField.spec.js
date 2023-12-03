@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils'
 import DateField from '@/components/DateField/DateField.vue'
 
-jest.mock('vue2-datepicker/index.css', () => '')
+jest.mock('vue-datepicker-next/index.css', () => '')
 
 describe('DateField', () => {
   const label = 'Start at ?'
