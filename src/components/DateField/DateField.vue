@@ -90,7 +90,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import '~vue-datepicker-next/index.css';
+  @import 'vue-datepicker-next/index.css';
 
   .mx-datepicker {
     width: 100%;

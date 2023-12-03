@@ -10,8 +10,8 @@
       </th>
     </thead>
     <tbody>
-      <template v-for="(item, index) in items">
-        <tr :key="index" data-test="table-items-row">
+      <template v-for="(item, index) in items" :key="index">
+        <tr data-test="table-items-row">
           <td v-if="hasRowNumber" data-test="table-items-number-row">{{ index + 1 }}</td>
           <slot :row="item">
             <td
