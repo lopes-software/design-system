@@ -1,4 +1,4 @@
-import AnsweredField from '@/components/AnsweredField/AnsweredField'
+import AnsweredField from '@/components/AnsweredField/AnsweredField.vue'
 
 export default {
   title: 'Form/AnsweredField',

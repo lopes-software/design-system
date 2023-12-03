@@ -1,4 +1,4 @@
-import DateField from '@/components/DateField/DateField'
+import DateField from '@/components/DateField/DateField.vue'
 
 export default {
   title: 'Form/DateField',
