@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils'
 
-jest.mock('bootstrap/dist/css/bootstrap.min.css', () => '')
+vi.mock('bootstrap/dist/css/bootstrap.min.css')
 import ModalDialog from '@/components/ModalDialog/ModalDialog.vue'
 
 function modalDialogFactory (params = {}) {
