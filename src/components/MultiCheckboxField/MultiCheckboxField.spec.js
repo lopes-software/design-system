@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils"
-import MultiCheckBoxField from '@/components/MultiCheckboxField/MultiCheckboxField'
+import MultiCheckBoxField from '@/components/MultiCheckboxField/MultiCheckboxField.vue'
 import CheckboxField from '@/components/CheckboxField/CheckboxField.vue'
 
 describe('MultiCheckboxField', () => {

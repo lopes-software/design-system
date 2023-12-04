@@ -1,4 +1,4 @@
-import AnsweredField from '@/components/AnsweredField/AnsweredField'
+import AnsweredField from '@/components/AnsweredField/AnsweredField.vue'
 import { shallowMount } from '@vue/test-utils'
 
 describe('AnsweredField', () => {
