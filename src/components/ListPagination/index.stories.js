@@ -5,22 +5,22 @@ export default {
   component: ListPagination
 }
 
-export const base = () => ({
+export const Base = () => ({
   components: { ListPagination },
   template: '<list-pagination :totalPages="10" :currentPage="2" />'
 })
 
-export const firstPage = () => ({
+export const FirstPage = () => ({
   components: { ListPagination },
   template: '<list-pagination :totalPages="10" :currentPage="1" />'
 })
 
-export const lastPage = () => ({
+export const LastPage = () => ({
   components: { ListPagination },
   template: '<list-pagination :totalPages="10" :currentPage="10" />'
 })
 
-export const customVisiblePages = () => ({
+export const CustomVisiblePages = () => ({
   components: { ListPagination },
   template: '<list-pagination :totalPages="10" :currentPage="10" :maxVisiblePageButtons="8" />'
 })

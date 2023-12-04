@@ -5,32 +5,32 @@ export default {
   component: InputField
 }
 
-export const base = () => ({
+export const Base = () => ({
   components: { InputField },
   template: '<input-field label="Name" />'
 })
 
-export const withError = () => ({
+export const WithError = () => ({
   components: { InputField },
   template: '<input-field label="Name" errorMessage="Name is required" />'
 })
 
-export const withValue = () => ({
+export const WithValue = () => ({
   components: { InputField },
   template: '<input-field label="Name" value="Steve Jobs" />'
 })
 
-export const rounded = () => ({
+export const Rounded = () => ({
   components: { InputField },
   template: '<input-field variant="rounded" />'
 })
 
-export const withPlaceholder = () => ({
+export const WithPlaceholder = () => ({
   components: { InputField },
   template: '<input-field placeholder="Search for projects..." />'
 })
 
-export const disable = () => ({
+export const Disable = () => ({
   components: { InputField },
   template: '<input-field label="Country" value="Brasil" :disabled="true" />'
 })

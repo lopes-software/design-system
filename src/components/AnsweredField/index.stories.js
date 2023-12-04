@@ -5,7 +5,7 @@ export default {
   component: AnsweredField
 }
 
-export const basic = () => ({
+export const Basic = () => ({
   components: { AnsweredField },
   template: '<answered-field label="Name" value="Asuka Langley Soriyu" />'
 })

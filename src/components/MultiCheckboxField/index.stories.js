@@ -19,7 +19,7 @@ const options = [
     label: 'Go'
   }
 ]
-export const base = () => ({
+export const Base = () => ({
   components: { MultiCheckboxField },
   data () {
     return { 
@@ -30,7 +30,7 @@ export const base = () => ({
   template: `<main> <multi-checkbox-field label="Languages" name="languages" :options=options v-model="value" /> {{ value }}</main>`,
 })
 
-export const withError = () => ({
+export const WithError = () => ({
   components: { MultiCheckboxField },
   data () {
     return { 

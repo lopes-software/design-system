@@ -5,14 +5,14 @@ export default {
   component: ModalDialog
 }
 
-export const base = () => ({
+export const Base = () => ({
   components: { ModalDialog },
   template: `<modal-dialog title="Some basic title" :show="true">
     <template v-slot:content> A basic example of modal content.</template>
   </modal-dialog>`
 })
 
-export const withFooter = () => ({
+export const WithFooter = () => ({
   components: { ModalDialog },
   template: `<modal-dialog title="Some basic title" :show="true">
     <template v-slot:content> A basic example of modal content.</template>
@@ -20,7 +20,7 @@ export const withFooter = () => ({
   </modal-dialog>`
 })
 
-export const hidden = () => ({
+export const Hidden = () => ({
   components: { ModalDialog },
   template: `<modal-dialog title="Some basic title" :show="false">
     <template v-slot:content> A basic example of modal content.</template>

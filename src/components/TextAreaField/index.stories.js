@@ -5,17 +5,17 @@ export default {
   component: TextAreaField
 }
 
-export const base = () => ({
+export const Base = () => ({
   components: { TextAreaField },
   template: '<text-area-field label="Observation" />'
 })
 
-export const withError = () => ({
+export const WithError = () => ({
   components: { TextAreaField },
   template: '<text-area-field label="Observation" errorMessage="Observation is required" />'
 })
 
-export const withValue = () => ({
+export const WithValue = () => ({
   components: { TextAreaField },
   template: '<text-area-field label="Observation" value="This is a really important observation!"/>'
 })
