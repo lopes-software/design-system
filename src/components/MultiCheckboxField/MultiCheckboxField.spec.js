@@ -1,4 +1,4 @@
-import { shallowMount } from "@vue/test-utils"
+import { mount } from "@vue/test-utils"
 import MultiCheckBoxField from '@/components/MultiCheckboxField/MultiCheckboxField.vue'
 import CheckboxField from '@/components/CheckboxField/CheckboxField.vue'
 
@@ -20,7 +20,7 @@ describe('MultiCheckboxField', () => {
       }],
       value: []
     }
-    const wrapper = shallowMount(MultiCheckBoxField, { propsData: {...propsData} })
+    const wrapper = mount(MultiCheckBoxField, { propsData: {...propsData} })
     expect(wrapper.findAllComponents(CheckboxField)).toHaveLength(3)
   })
 
@@ -41,7 +41,7 @@ describe('MultiCheckboxField', () => {
       }],
       value: [1, 3]
     }
-    const wrapper = shallowMount(MultiCheckBoxField, { propsData: {...propsData} })
+    const wrapper = mount(MultiCheckBoxField, { propsData: {...propsData} })
     const components = wrapper.findAllComponents(CheckboxField)
     expect(components.at(0).attributes('label')).toBe("Ruby")
     expect(components.at(0).attributes('value')).toBe("true")
@@ -72,7 +72,7 @@ describe('MultiCheckboxField', () => {
         errorMessage: 'Field invalid'
       }
 
-      const wrapper = shallowMount(MultiCheckBoxField, { propsData: { ...propsData } })
+      const wrapper = mount(MultiCheckBoxField, { propsData: { ...propsData } })
       expect(wrapper.find('[data-test="multi-checkbox-field-error-message"]').exists()).toBeTruthy()
       expect(wrapper.find('[data-test="multi-checkbox-field-error-message"]').text()).toBe("Field invalid")
     })
@@ -94,7 +94,7 @@ describe('MultiCheckboxField', () => {
         }],
         value: [],
       }
-      const wrapper = shallowMount(MultiCheckBoxField, { propsData: { ...propsData } })
+      const wrapper = mount(MultiCheckBoxField, { propsData: { ...propsData } })
       expect(wrapper.find('[data-test="multi-checkbox-field-error-message"]').exists()).toBeFalsy()
     })
   })

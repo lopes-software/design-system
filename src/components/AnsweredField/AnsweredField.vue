@@ -4,7 +4,7 @@
     <input
       :value="value"
       class="form-control"
-      disabled
+      disabled="true"
       :data-test="dataTest"
     />
   </div>
