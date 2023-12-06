@@ -14,8 +14,8 @@
         :name="`${name}-${option.value}`"
         :label="option.label"
         data-test="multi-checkbox-input"
-        :value="isChecked(option.value)"
-        @input="handleInput(option.value)"
+        :modelValue="isChecked(option.value)"
+        @update:modelValue="handleInput(option.value)"
       />
     </div>
     <span
@@ -42,7 +42,7 @@ export default {
   },
 
   props: {
-    value: {
+    modelValue: {
       type: null,
       default: () => []
     }, 
@@ -66,14 +66,14 @@ export default {
 
   methods: {
     handleInput (value) {
-      if (this.value.includes(value)) {
-        this.$emit('input', this.value.filter(i => i !== value))
+      if (this.modelValue.includes(value)) {
+        this.$emit('update:modelValue', this.modelValue.filter(i => i !== value))
       } else {
-        this.$emit('input', [...this.value, value])
+        this.$emit('update:modelValue', [...this.modelValue, value])
       }
     },
     isChecked(value) {
-      return this.value.includes(value)
+      return this.modelValue.includes(value)
     }
   },
 }
