@@ -2,19 +2,16 @@
   <form-session>
     <select-field :options="items" :label="label" @input="addTag" v-model="currentValue" data-test="tag-select-field" :errorMessage="errorMessage"/>
 
-    <div>
-      <form-tag
-        v-for="(item, index) in mutableSelectedItems"
-        :value="item.value"
-        :key="index"
-        :closable="true"
-        :data-test="item.value"
-        @tag="removeItem"
-        class="me-2"
-      >{{ item.label }}</form-tag>
-    </div>
+    <form-tag
+      v-for="(item, index) in mutableSelectedItems"
+      :value="item.value"
+      :key="index"
+      :closable="true"
+      :data-test="`form-tag-${item.value}`"
+      @tag="removeItem"
+      class="me-2"
+    >{{ item.label }}</form-tag>
   </form-session>
-
 </template>
 
 <script>
@@ -63,6 +60,8 @@ export default {
       if (repeatedItem) return
 
       const item = this.items.find((item) => item.value === itemValue)
+      if (item === undefined) return
+
       this.mutableSelectedItems.push(item)
       this.$emit('input', this.mutableSelectedItems)
     },
