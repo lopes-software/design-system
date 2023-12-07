@@ -1,6 +1,7 @@
+import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
+
 import DateField from '@/components/DateField/DateField.vue'
-import { expect, describe } from 'vitest'
 
 vi.mock('vue-datepicker-next/index.css')
 

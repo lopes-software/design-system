@@ -1,5 +1,7 @@
-import AnsweredField from '@/components/AnsweredField/AnsweredField.vue'
+import { describe, it, expect } from 'vitest'
 import { shallowMount } from '@vue/test-utils'
+
+import AnsweredField from '@/components/AnsweredField/AnsweredField.vue'
 
 describe('AnsweredField', () => {
   it('renders a disabled input with received label and value', () => {

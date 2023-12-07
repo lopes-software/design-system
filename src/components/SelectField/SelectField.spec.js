@@ -1,4 +1,6 @@
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
+
 import SelectField from '@/components/SelectField/SelectField.vue'
 
 describe('SelectField', () => {

@@ -60,10 +60,11 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
       "eslint:recommended",
-      "plugin:storybook/recommended"
+      "plugin:storybook/recommended",
+      "plugin:vue/vue3-essential"
     ],
+    
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },

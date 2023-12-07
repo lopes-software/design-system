@@ -9,7 +9,13 @@ export default mergeConfig(
     test: {
       globals: true,
       environment: 'happy-dom',
-      exclude: ['**/node_modules/**', '**/tests/e2e/**'],
+      include: ['./src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
+      exclude: [
+        '**/node_modules/**',
+        '**/dist/**',
+        '**/cypress/**',
+        '**/.{idea,git,cache,output,temp}/**',
+      ],
       coverage: {
         provider: 'v8',
         reporter: ['text', 'json', 'html'],
@@ -17,7 +23,13 @@ export default mergeConfig(
         functions: 100,
         branches: 100,
         statements: 100,
-        exclude: [],
+        exclude: [
+          '.storybook/', 
+          'storybook-static', 
+          'src/components/**/*.stories.js',
+          'src/index.js',
+          'src/components/index.js'
+        ],
       },
     },
   }),

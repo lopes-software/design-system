@@ -1,4 +1,6 @@
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
+
 import InputField from '@/components/InputField/InputField.vue'
 
 describe('InputField', () => {

@@ -1,7 +1,9 @@
+import { describe, it, expect, vi } from 'vitest'
 import { shallowMount } from '@vue/test-utils'
 
-vi.mock('bootstrap/dist/css/bootstrap.min.css')
 import ModalDialog from '@/components/ModalDialog/ModalDialog.vue'
+
+vi.mock('bootstrap/dist/css/bootstrap.min.css')
 
 function modalDialogFactory (params = {}) {
   const propsData = {

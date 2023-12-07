@@ -1,4 +1,6 @@
+import { describe, it, expect } from 'vitest'
 import { shallowMount } from '@vue/test-utils'
+
 import CheckboxField from '@/components/CheckboxField/CheckboxField.vue'
 
 describe('CheckboxField', () => {
