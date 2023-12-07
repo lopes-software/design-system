@@ -49,9 +49,9 @@ describe('ModalDialog', () => {
 
     it('set class modal-large when receive "large" value', () => {
       const wrapper = modalDialogFactory({ size: 'large' })
-      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain("col-6")
-      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain("offset-3")
-      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain("mt-5")
+      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain('col-6')
+      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain('offset-3')
+      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain('mt-5')
     })
   })
 })

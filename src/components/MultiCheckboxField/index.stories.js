@@ -27,7 +27,7 @@ export const Base = () => ({
       options: options,
     }
   },
-  template: `<main> <multi-checkbox-field label="Languages" name="languages" :options=options v-model="value" /> {{ value }}</main>`,
+  template: '<main> <multi-checkbox-field label="Languages" name="languages" :options=options v-model="value" /> {{ value }}</main>',
 })
 
 export const WithError = () => ({
@@ -38,5 +38,5 @@ export const WithError = () => ({
       options: options,
     }
   },
-  template: `<multi-checkbox-field label="Languages" name="languages" :options=options v-model="value" errorMessage="Cannot be blank" />`,
+  template: '<multi-checkbox-field label="Languages" name="languages" :options=options v-model="value" errorMessage="Cannot be blank" />',
 })

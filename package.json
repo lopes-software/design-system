@@ -68,6 +68,8 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "quotes": ["error", "single", { "avoidEscape": true }]
+    }
   }
 }
