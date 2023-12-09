@@ -1,4 +1,3 @@
-import { fileURLToPath, URL } from "url";
 import { mergeConfig } from 'vite';
 import { defineConfig } from 'vitest/config';
 import viteConfig from "./vite.config.mjs";
@@ -24,8 +23,8 @@ export default mergeConfig(
         branches: 100,
         statements: 100,
         exclude: [
-          '.storybook/', 
-          'storybook-static', 
+          '.storybook/',
+          'storybook-static',
           'src/components/**/*.stories.js',
           'src/index.js',
           'src/components/index.js'
