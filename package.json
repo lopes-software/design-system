@@ -23,6 +23,7 @@
     "url": "git+https://github.com/lopes-software/design-system.git"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.11.2",
     "core-js": "^3.8.3",
     "vue": "^3.3.9",
     "vue-datepicker-next": "^1.0.3"
