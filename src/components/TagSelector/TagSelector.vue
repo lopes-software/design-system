@@ -81,7 +81,7 @@ export default {
 
   watch: {
     modelValue: {
-      handler(items, _oldItems) {
+      handler(items) {
         /* v8 ignore next 1 */
         this.mutableSelectedItems = items
       },
