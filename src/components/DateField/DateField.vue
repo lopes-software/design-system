@@ -24,7 +24,7 @@ import FormSession from '@/components/FormSession/FormSession.vue'
 import DatePicker from 'vue-datepicker-next';
 import 'vue-datepicker-next/index.css';
 
-// NOTE: Datepicker doc https://mengxiong10.github.io/vue2-datepicker/index.html
+// NOTE: Datepicker doc https://mengxiong10.github.io/vue-datepicker-next/
 export default {
   name: 'DateField',
 
@@ -76,12 +76,6 @@ export default {
   },
 
   methods: {
-    hasError (errorMessage) {
-      if (errorMessage === undefined) return ''
-
-      return 'is-invalid'
-    },
-
     handleInput (value) {
       this.$emit('input', value)
     }
