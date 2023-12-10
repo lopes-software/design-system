@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi} from 'vitest'
 import { mount } from '@vue/test-utils'
 
 import TagSelector from '@/components/TagSelector/TagSelector.vue'
@@ -33,6 +33,14 @@ describe('TagSelector', () => {
       await wrapper.vm.$nextTick()
 
       expect(wrapper.find('[data-test="form-tag-1"]').exists()).toBeFalsy()
+    })
+  })
+
+  describe('when values are received', async () => {
+    const wrapper = mount(TagSelector, { propsData: { label, items, modelValue: [items[0]] } })
+
+    it('render received values', async () => {
+      expect(wrapper.find('[data-test="form-tag-1"]').exists()).toBeTruthy()
     })
   })
 
