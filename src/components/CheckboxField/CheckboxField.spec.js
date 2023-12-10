@@ -1,4 +1,6 @@
+import { describe, it, expect } from 'vitest'
 import { shallowMount } from '@vue/test-utils'
+
 import CheckboxField from '@/components/CheckboxField/CheckboxField.vue'
 
 describe('CheckboxField', () => {
@@ -14,7 +16,7 @@ describe('CheckboxField', () => {
     const wrapper = shallowMount(CheckboxField, { propsData: { label, name } })
     wrapper.find('[data-test="checkbox-field-input"]').trigger('change', true)
     await wrapper.vm.$nextTick()
-    expect(wrapper.emitted('input')).toBeTruthy()
+    expect(wrapper.emitted('update:modelValue')).toBeTruthy()
   })
 
   describe('errorMessage', () => {

@@ -1,30 +1,28 @@
 <template>
-  <div>
-    <div class="form-check">
-      <input
-        type="checkbox"
-        :name="name"
-        :id="name"
-        :checked="value"
-        :disabled="disabled"
-        class="form-check-input"
-        :data-test="dataTest"
-        @change="(event) => this.$emit('input', event.target.checked)"
-      >
-
-      <label :for="name" class="form-check-label" data-test="checkbox-field-label">
-        {{ label }}
-      </label>
-    </div>
-
-    <span
-      v-if="errorMessage != undefined"
-      class="text-danger"
-      data-test="checkbox-field-error-message"
+  <div class="form-check">
+    <input
+      type="checkbox"
+      :name="name"
+      :id="name"
+      :checked="modelValue"
+      :disabled="disabled"
+      class="form-check-input"
+      :data-test="dataTest"
+      @change="(event) => this.$emit('update:modelValue', event.target.checked)"
     >
-      {{ errorMessage }}
-    </span>
+
+    <label :for="name" class="form-check-label" data-test="checkbox-field-label">
+      {{ label }}
+    </label>
   </div>
+
+  <span
+    v-if="errorMessage != undefined"
+    class="text-danger"
+    data-test="checkbox-field-error-message"
+  >
+    {{ errorMessage }}
+  </span>
 </template>
 
 <script>
@@ -44,7 +42,7 @@ export default {
       type: Boolean
     },
 
-    value: {
+    modelValue: {
       type: Boolean,
       default: false
     },

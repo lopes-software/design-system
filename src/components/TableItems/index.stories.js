@@ -5,7 +5,7 @@ export default {
   component: TableItems
 }
 
-export const itemsUsingProps = () => {
+export const ItemsUsingProps = () => {
   const fields = '["Date", "Status"]'
   const items = '[{"date": "10/10/2022", "status": "Approved"}, {"date": "10/10/2022", "status": "Rejected"}]'
   return {
@@ -14,7 +14,7 @@ export const itemsUsingProps = () => {
   }
 }
 
-export const tableWithRowNumber = () => {
+export const TableWithRowNumber = () => {
   const fields = '["Date", "Status"]'
   const items = '[{"date": "10/10/2022", "status": "Approved"}, {"date": "10/10/2022", "status": "Rejected"}]'
   return {
@@ -23,7 +23,7 @@ export const tableWithRowNumber = () => {
   }
 }
 
-export const itemsUsingSlots = () => {
+export const ItemsUsingSlots = () => {
   const fields = '["","Date", "Status"]'
   const items = '[{"date": "10/10/2022", "status": "Approved"}, {"date": "10/10/2022", "status": "Rejected"}]'
   return {

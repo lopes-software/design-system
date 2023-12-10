@@ -1,4 +1,5 @@
-import { shallowMount } from '@vue/test-utils'
+import { describe, it, expect } from 'vitest'
+import { mount } from '@vue/test-utils'
 
 import TagSelector from '@/components/TagSelector/TagSelector.vue'
 import SelectField from '@/components/SelectField/SelectField.vue'
@@ -13,14 +14,14 @@ describe('TagSelector', () => {
   ]
 
   describe('Tags', () => {
-    const wrapper = shallowMount(TagSelector, { propsData: { label, items } })
+    const wrapper = mount(TagSelector, { propsData: { label, items } })
     const childSelect = wrapper.findComponent(SelectField)
 
     it('add new tag when option is select emit a event', async () => {
       childSelect.vm.$emit('input', '1')
       await wrapper.vm.$nextTick()
 
-      expect(wrapper.find('[datatest="1"]').exists()).toBeTruthy()
+      expect(wrapper.find('[data-test="form-tag-1"]').exists()).toBeTruthy()
     })
 
     it('remove tag when tag emit a event', async () => {
@@ -31,12 +32,12 @@ describe('TagSelector', () => {
       formTag.vm.$emit('tag', '1')
       await wrapper.vm.$nextTick()
 
-      expect(wrapper.find('[datatest="1"]').exists()).toBeFalsy()
+      expect(wrapper.find('[data-test="form-tag-1"]').exists()).toBeFalsy()
     })
   })
 
   it('renders select-field', () => {
-    const wrapper = shallowMount(TagSelector, { propsData: { label, items } })
-    expect(wrapper.find('[datatest="tag-select-field"]').exists()).toBeTruthy()
+    const wrapper = mount(TagSelector, { propsData: { label, items } })
+    expect(wrapper.find('[data-test="tag-select-field"]').exists()).toBeTruthy()
   })
 })

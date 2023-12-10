@@ -2,7 +2,7 @@
   <span
     class="form-tag"
     :class="variantClasses"
-    data-test="form-tag"
+    :data-test="dataTest"
   >
     <button
       v-if="closable"

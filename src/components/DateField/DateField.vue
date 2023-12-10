@@ -21,8 +21,8 @@
 
 <script>
 import FormSession from '@/components/FormSession/FormSession.vue'
-import DatePicker from 'vue2-datepicker'
-import 'vue2-datepicker/index.css'
+import DatePicker from 'vue-datepicker-next';
+import 'vue-datepicker-next/index.css';
 
 // NOTE: Datepicker doc https://mengxiong10.github.io/vue2-datepicker/index.html
 export default {
@@ -90,7 +90,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  @import '~vue2-datepicker/scss/index.scss';
+  @import 'vue-datepicker-next/index.css';
 
   .mx-datepicker {
     width: 100%;

@@ -5,7 +5,7 @@ export default {
   component: TagSelector
 }
 
-export const basic = () => ({
+export const Basic = () => ({
   components: { TagSelector },
   template: `<tag-selector
               :items="[{label: 'Ruby', value: '42'}, {label: 'Elixir', value: '31'}, {label: 'Go', value: '30'}]"

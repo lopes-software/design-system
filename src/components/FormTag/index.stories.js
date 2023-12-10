@@ -5,22 +5,22 @@ export default {
   component: FormTag
 }
 
-export const basic = () => ({
+export const Basic = () => ({
   components: { FormTag },
   template: '<form-tag>Basic</form-tag>'
 })
 
-export const secondary = () => ({
+export const Secondary = () => ({
   components: { FormTag },
   template: '<form-tag variant=\'secondary\'>Secondary</form-tag>'
 })
 
-export const closable = () => ({
+export const Closable = () => ({
   components: { FormTag },
   template: '<form-tag variant=\'secondary\' :closable=\'true\'>Secondary</form-tag>'
 })
 
-export const basicAndClosable = () => ({
+export const BasicAndClosable = () => ({
   components: { FormTag },
   template: '<form-tag :closable=\'true\'>Secondary</form-tag>'
 })

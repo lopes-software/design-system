@@ -10,20 +10,18 @@
       </th>
     </thead>
     <tbody>
-      <template v-for="(item, index) in items">
-        <tr :key="index" data-test="table-items-row">
-          <td v-if="hasRowNumber" data-test="table-items-number-row">{{ index + 1 }}</td>
-          <slot :row="item">
-            <td
-              v-for="(field, index) in Object.keys(item)"
-              :key="index"
-              :data-test="`table-items-column-${field}`"
-            >
-            {{  item[field] }}
-            </td>
-          </slot>
-        </tr>
-      </template>
+      <tr data-test="table-items-row" v-for="(item, index) in items" :key="index">
+        <td v-if="hasRowNumber" data-test="table-items-number-row">{{ index + 1 }}</td>
+        <slot :row="item">
+          <td
+            v-for="(field, index) in Object.keys(item)"
+            :key="index"
+            :data-test="`table-items-column-${field}`"
+          >
+          {{  item[field] }}
+          </td>
+        </slot>
+      </tr>
     </tbody>
   </table>
 </template>

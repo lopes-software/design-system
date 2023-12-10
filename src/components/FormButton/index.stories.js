@@ -5,32 +5,32 @@ export default {
   component: FormButton
 }
 
-export const primary = () => ({
+export const Primary = () => ({
   components: { FormButton },
   template: '<form-button variant="primary">Save</form-button>'
 })
 
-export const primaryDisabled = () => ({
+export const PrimaryDisabled = () => ({
   components: { FormButton },
   template: '<form-button variant="primary" disabled>Save</form-button>'
 })
 
-export const secondary = () => ({
+export const Secondary = () => ({
   components: { FormButton },
   template: '<form-button variant="secondary">Save</form-button>'
 })
 
-export const alternate = () => ({
+export const Alternate = () => ({
   components: { FormButton },
   template: '<form-button variant="alternate">Save</form-button>'
 })
 
-export const outlinePrimary = () => ({
+export const OutlinePrimary = () => ({
   components: { FormButton },
   template: '<form-button variant="outline-primary">Save</form-button>'
 })
 
-export const outlineSecondary = () => ({
+export const OutlineSecondary = () => ({
   components: { FormButton },
   template: '<form-button variant="outline-secondary">Save</form-button>'
 })

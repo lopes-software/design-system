@@ -1,7 +1,9 @@
+import { describe, it, expect, vi } from 'vitest'
 import { shallowMount } from '@vue/test-utils'
 
-jest.mock('bootstrap/dist/css/bootstrap.min.css', () => '')
 import ModalDialog from '@/components/ModalDialog/ModalDialog.vue'
+
+vi.mock('bootstrap/dist/css/bootstrap.min.css')
 
 function modalDialogFactory (params = {}) {
   const propsData = {
@@ -47,9 +49,9 @@ describe('ModalDialog', () => {
 
     it('set class modal-large when receive "large" value', () => {
       const wrapper = modalDialogFactory({ size: 'large' })
-      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain("col-6")
-      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain("offset-3")
-      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain("mt-5")
+      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain('col-6')
+      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain('offset-3')
+      expect(wrapper.find('[data-test="modal-content"]').classes()).toContain('mt-5')
     })
   })
 })

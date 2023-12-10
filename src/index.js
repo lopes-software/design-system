@@ -5,7 +5,7 @@ const componentsList = components?.default
 const DesignSystemComponents = {
   install(Vue) {
     Object.keys(componentsList).forEach(name => {
-      Vue.component(name, componentsList[name])
+      Vue.component(componentsList[name])
     })
   }
 }
