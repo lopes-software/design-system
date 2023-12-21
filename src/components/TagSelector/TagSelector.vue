@@ -38,8 +38,9 @@ export default {
       type: Array
     },
 
-    value: {
-      type: Array
+    modelValue: {
+      type: Array,
+      default: () => []
     },
 
     dataTest: {
@@ -53,6 +54,10 @@ export default {
     }
   },
 
+  mounted () {
+    this.mutableSelectedItems = this.modelValue
+  },
+
   methods: {
     addTag (itemValue) {
       const repeatedItem = this.mutableSelectedItems.some((item) => item.value === itemValue)
@@ -63,20 +68,24 @@ export default {
       if (item === undefined) return
 
       this.mutableSelectedItems.push(item)
-      this.$emit('input', this.mutableSelectedItems)
+      this.$emit('update:modelValue', this.mutableSelectedItems)
     },
 
     removeItem (itemValue) {
       this.mutableSelectedItems = this.mutableSelectedItems.filter((item) => item.value !== itemValue)
-      this.$emit('input', this.mutableSelectedItems)
+      this.$emit('update:modelValue', this.mutableSelectedItems)
       // reset the select option
       this.currentValue = undefined
     }
   },
 
   watch: {
-    value: function (items) {
-      this.mutableSelectedItems = items
+    modelValue: {
+      handler(items) {
+        /* v8 ignore next 1 */
+        this.mutableSelectedItems = items
+      },
+      deep: true
     }
   },
 

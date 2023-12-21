@@ -43,12 +43,6 @@ export default {
   },
 
   computed: {
-    modalSize () {
-      if (this.size === 'medium') { return 'modal-dialog' }
-
-      return 'modal-large'
-    },
-
     largeClasses () {
       if (this.size === 'large') {
         return ['col-6', 'offset-3', 'mt-5']

@@ -54,8 +54,45 @@ describe('MultiCheckboxField', () => {
     expect(components.at(2).props('modelValue')).toBe(true)
   })
 
+  describe('handle inputs', () => {
+    const options = [{
+      value: 1,
+      label: 'Ruby'
+    },
+    {
+      value: 2,
+      label: 'JS',
+    },
+    {
+      value: 3,
+      label: 'Go'
+    }]
+    it('uncheck if item is checked', async () => {
+      const propsData = {
+        label: 'Languages',
+        options: options,
+        modelValue: [1]
+      }
+      const wrapper = mount(MultiCheckBoxField, { propsData: {...propsData} })
+      const rubyCheckbox = wrapper.findAllComponents(CheckboxField).at(0)
+      await rubyCheckbox.find('input[type="checkbox"]').setChecked(false)
+      expect(wrapper.emitted('update:modelValue', [])).toBeTruthy()
+    })
+
+    it('check if item is not selected', async () => {
+      const propsData = {
+        label: 'Languages',
+        options: options,
+        modelValue: []
+      }
+      const wrapper = mount(MultiCheckBoxField, { propsData: {...propsData} })
+      const rubyCheckbox = wrapper.findAllComponents(CheckboxField).at(0)
+      await rubyCheckbox.find('input[type="checkbox"]').setChecked()
+      expect(wrapper.emitted('update:modelValue', [1])).toBeTruthy()
+    })
+  })
+
   describe('error message', () => {
-    
     it('renders error message when errorMessage prop has a value', () => {
       const propsData = {
         label: 'Languages',
@@ -101,5 +138,4 @@ describe('MultiCheckboxField', () => {
       expect(wrapper.find('[data-test="multi-checkbox-field-error-message"]').exists()).toBeFalsy()
     })
   })
-  
 })

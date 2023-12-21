@@ -36,6 +36,14 @@ describe('TagSelector', () => {
     })
   })
 
+  describe('when values are received', async () => {
+    const wrapper = mount(TagSelector, { propsData: { label, items, modelValue: [items[0]] } })
+
+    it('render received values', async () => {
+      expect(wrapper.find('[data-test="form-tag-1"]').exists()).toBeTruthy()
+    })
+  })
+
   it('renders select-field', () => {
     const wrapper = mount(TagSelector, { propsData: { label, items } })
     expect(wrapper.find('[data-test="tag-select-field"]').exists()).toBeTruthy()
