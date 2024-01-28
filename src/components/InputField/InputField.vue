@@ -4,7 +4,7 @@
     <input
       :type="type"
       class="form-control"
-      @input="(event) => this.$emit('update:modelValue', event.target.value)"
+      @input="(event) => this.$emit('update:value', event.target.value)"
       @keyup.enter="(event) => $emit('enter')"
       @change="(event) => this.$emit('change', event)"
       :value="value"
