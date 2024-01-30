@@ -7,7 +7,7 @@
       @input="(event) => this.$emit('update:modelValue', event.target.value)"
       @keyup.enter="(event) => $emit('enter')"
       @change="(event) => this.$emit('change', event)"
-      :value="value"
+      :value="modelValue"
       :class="[hasError(errorMessage), variant]"
       :disabled="disabled"
       :data-test="dataTest"
@@ -28,13 +28,16 @@
 import FormSession from '@/components/FormSession/FormSession.vue'
 export default {
   components: { FormSession },
+
+  emits: ['update:modelValue', 'enter', 'change'],
+
   props: {
     label: {
       type: String,
       default: undefined
     },
 
-    value: {
+    modelValue: {
       type: [String, Number],
       default: ''
     },
