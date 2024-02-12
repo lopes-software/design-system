@@ -1,5 +1,5 @@
 <template>
-  <div class="modal fade" :class="[{active: show}, {show: show}]" tabindex="-1" role="dialog" @click.self="close" data-test="modal-dialog-background">
+  <div class="modal fade modal-dialog-background" :class="[{active: show}, {show: show}]" tabindex="-1" role="dialog" @click.self="close" data-test="modal-dialog-background">
     <div :class="largeClasses" role="document" data-test="modal-content">
       <div class="modal-content">
         <div class="modal-header">
@@ -65,6 +65,10 @@ export default {
 
 .modal.show.active {
   display: block;
+}
+
+.modal-dialog-background {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-dialog {
