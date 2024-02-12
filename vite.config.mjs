@@ -6,10 +6,11 @@ import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
+    emptyOutDir: false,
     lib: {
-      entry: path.resolve(__dirname, 'src/components/index.js'),
+      entry: path.resolve(__dirname, 'src/index.js'),
       name: 'DesignSystem',
-      fileName: (format) => `design-system.${format}.js`,
+      formats: ['es']
     },
     rollupOptions: {
       external: ['vue'],

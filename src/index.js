@@ -1,6 +1,6 @@
 import * as components from './components'
 
-const componentsList = components?.default
+export { components }
 
 const DesignSystemComponents = {
   install(Vue) {
@@ -10,4 +10,10 @@ const DesignSystemComponents = {
   }
 }
 
-export default DesignSystemComponents
+export default {
+  install: (app) => {
+    Object.keys(components).forEach(name => {
+      app.component(components[name])
+    })
+  }
+}
