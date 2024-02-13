@@ -30,7 +30,7 @@ const components = {
   DsMultiCheckboxField: MultiCheckboxField,
 }
 
-export { components }
+export { DsInputField, DsFormButton } from components
 
 export default {
   install: (app) => {
