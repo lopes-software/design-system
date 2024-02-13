@@ -30,7 +30,6 @@ const components = {
   DsMultiCheckboxField: MultiCheckboxField,
 }
 
-export { DsInputField, DsFormButton } from components
 
 export default {
   install: (app) => {
@@ -39,3 +38,6 @@ export default {
     })
   }
 }
+
+export { default as DsInputField } from '@/components/InputField/InputField.vue'
+export { default as DsFormButton } from '@/components/FormButton/FormButton.vue'
