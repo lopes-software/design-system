@@ -14,7 +14,7 @@
         v-for="option in options"
         :key="option.value"
         :value="option.value"
-        :selected="option.value === value ? 'selected' : false"
+        :selected="option.value === modelValue ? 'selected' : false"
       >
         {{ option.label }}
       </option>
