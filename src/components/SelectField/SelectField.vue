@@ -38,6 +38,8 @@ export default {
     FormSession
   },
 
+  emits: ['update:modelValue', 'change'],
+
   props: {
     label: {
       require: true,
