@@ -5,7 +5,7 @@
     <select
       class="form-select"
       @change="(event) => this.$emit('change', event.target.value)"
-      @input="(event) => this.$emit('input', event.target.value)"
+      @input="(event) => this.$emit('update:modelValue', event.target.value)"
       :value="value"
       :class="[hasError(errorMessage), variant]"
       :data-test="dataTest"
