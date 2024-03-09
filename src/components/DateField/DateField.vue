@@ -2,11 +2,11 @@
   <form-session>
     <label data-test="date-field-label">{{ label }}</label>
       <date-picker
-        @input="handleInput"
+        @update:value="handleInput"
         value-type="format"
         :format="format"
         :type="type"
-        :value="value"
+        :value="datePickerValue"
         :data-test="dataTest"
       />
     <span
@@ -33,13 +33,21 @@ export default {
     DatePicker
   },
 
+  emits: ['update:modelValue'],
+
+  data () {
+    return {
+      datePickerValue: this.modelValue,
+    }
+  },
+
   props: {
     label: {
       require: true,
       type: String
     },
 
-    value: {
+    modelValue: {
       type: String,
       default: ''
     },
@@ -77,7 +85,8 @@ export default {
 
   methods: {
     handleInput (value) {
-      this.$emit('input', value)
+      this.$emit('update:modelValue', value)
+      this.datePickerValue = value
     }
   }
 }

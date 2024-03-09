@@ -36,16 +36,16 @@ describe('DateField', () => {
   })
 
   describe('when type prop is date', () => {
-    it('component value is formatted to a date', () => {
-      const wrapper = mount(DateField, { propsData: { label, value: '30/10/2023 10:50' } })
+    it('component value is formatted to a date', async () => {
+      const wrapper = mount(DateField, { propsData: { label, modelValue: '30/10/2023 10:50' } })
       const datePicker = wrapper.findComponent(DatePicker)
       expect(datePicker.find('input').element.value).toEqual('30/10/2023')
     })
   })
 
-  describe('when type prop is date time', () => {
-    it('component value is formatted to a date', () => {
-      const wrapper = mount(DateField, { propsData: { label, value: '30/10/2023 10:50', type: 'datetime' } })
+  describe('when type prop is date time',  () => {
+    it('component value is formatted to a date', async () => {
+      const wrapper = mount(DateField, { propsData: { label, modelValue: '30/10/2023 10:50', type: 'datetime' } })
       const datePicker = wrapper.findComponent(DatePicker)
       expect(datePicker.find('input').element.value).toEqual('30/10/2023 10:50')
     })
