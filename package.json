@@ -1,6 +1,6 @@
 {
   "name": "@lopes-software/design-system",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "main": "dist/design-system.es.js",
   "module": "dist/design-system.umd.js",
   "files": [

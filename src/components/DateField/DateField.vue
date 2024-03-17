@@ -88,6 +88,12 @@ export default {
       this.$emit('update:modelValue', value)
       this.datePickerValue = value
     }
+  },
+
+  watch: {
+    modelValue (value) {
+      this.datePickerValue = value
+    }
   }
 }
 </script>
