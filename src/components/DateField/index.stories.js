@@ -34,3 +34,8 @@ export const Disable = () => ({
   components: { DateField },
   template: '<date-field label="Data" value="10/10/2010" :disabled="true" />'
 })
+
+export const DisableDateAfter = () => ({
+  components: { DateField },
+  template: '<date-field label="Data" :disable-date-after />'
+})
