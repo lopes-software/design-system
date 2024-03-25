@@ -2,6 +2,18 @@
   <form-session>
     <label data-test="date-field-label">{{ label }}</label>
       <date-picker
+        v-if="disableDateAfter"
+        @update:value="handleInput"
+        value-type="format"
+        :format="format"
+        :type="type"
+        :value="datePickerValue"
+        :data-test="dataTest"
+        :disabledDate="notAfterToday"
+      />
+
+      <date-picker
+        v-else
         @update:value="handleInput"
         value-type="format"
         :format="format"
@@ -70,6 +82,11 @@ export default {
     dataTest: {
       type: String,
       default: 'date-field-input'
+    },
+
+    disableDateAfter: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -87,6 +104,10 @@ export default {
     handleInput (value) {
       this.$emit('update:modelValue', value)
       this.datePickerValue = value
+    },
+
+    notAfterToday(date) {
+      return date > new Date(new Date().setHours(0, 0, 0, 0));
     }
   },
 
