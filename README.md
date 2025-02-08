@@ -1,4 +1,4 @@
-# design-system
+# design-system (Open)
 
 ### Run all tests
 ```
