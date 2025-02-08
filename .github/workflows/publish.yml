@@ -23,10 +23,7 @@ jobs:
         run: |
           npm config set @lopes-software:registry https://npm.pkg.github.com
           npm set //npm.pkg.github.com/:username="lopes-software"
-          npm set //npm.pkg.github.com/:_authToken=${NPM_TOKEN}
           npm set //npm.pkg.github.com/:email="flopes.alexandre@gmail.com"
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - name: Publish package on NPM
         run: npm publish
-        
+
